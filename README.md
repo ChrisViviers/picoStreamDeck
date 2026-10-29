@@ -15,8 +15,7 @@ A DIY stream deck built on a Raspberry Pi Pico, with a 3×3 grid of buttons, a v
 | Tactile momentary push buttons | 9 | 12 mm buttons can take snap-on keycaps |
 | [0.96" yellow/blue 128×64 OLED (I2C, SSD1306)](https://www.pishop.co.za/store/yellow-blue-double-colour-128x64-oled-lcd-display-module-for-arduino-096-i2c-iic-spi-serial) | 1 | Pins labelled GND, VDD, SCK, SDA |
 | 10 kΩ linear potentiometer | 1 | Marked "B10K", not "A" (logarithmic) |
-| 1N4148 diodes | 9 | Optional: prevents ghost presses when holding 3+ buttons |
-| Perfboard or breadboard, hookup wire | – | |
+| Perfboard or breadboard, hookup wire, 3D Printed Mount | – | |
 | USB data cable | 1 | Must carry data, not charge-only |
 
 ## Wiring
@@ -63,15 +62,6 @@ The deck needs three Adafruit libraries:
 - `adafruit_displayio_ssd1306.mpy` (single file)
 
 **Option A: from the library bundle.** Open `boot_out.txt` on CIRCUITPY to see your CircuitPython version. Download the matching bundle from [circuitpython.org/libraries](https://circuitpython.org/libraries), unzip it, and copy the three items above from its `lib` folder into a `lib` folder on CIRCUITPY.
-
-**Option B: with circup.** If you have Python on your computer:
-
-```bash
-pip install circup
-circup install -r requirements.txt
-```
-
-circup finds the Pico automatically and installs the right versions.
 
 ### 3. Upload the code
 
